@@ -1,0 +1,109 @@
+/* --- FONDO Y TIPOGRAFÍA --- */
+body {
+    margin:0;
+    padding:0;
+    font-family: 'Arial', sans-serif;
+    background: #ffe6f0; 
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* --- CORAZONES --- */
+.heart {
+    position: fixed;
+    font-size: 20px;
+    z-index: 1;
+    pointer-events: none;
+    animation-name: floatHeart;
+    animation-timing-function: linear;
+}
+
+@keyframes floatHeart {
+    0% { transform: translateY(0); opacity:1;}
+    100% { transform: translateY(-600px); opacity:0;}
+}
+
+/* --- PANTALLA INICIAL --- */
+#introText {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+    text-align:center;
+    font-size:1.5em;
+    color:#ff1a75;
+}
+
+/* --- BOTÓN SIGUIENTE --- */
+#nextBtn {
+    margin-top:20px;
+    padding:10px 25px;
+    font-size:1.2em;
+    color:white;
+    background: linear-gradient(45deg,#ff4d94,#ff1a75);
+    border:none;
+    border-radius:12px;
+    cursor:pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+#nextBtn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #ff1a75;
+}
+
+/* --- PREGUNTA QUIERES SER MI NOVIA --- */
+#question {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+    text-align:center;
+    font-size:2em;
+    color:#e60073;
+    position: relative;
+}
+
+/* --- BOTONES SI Y NO --- */
+#yesBtn, #noBtn {
+    padding:15px 30px;
+    font-size:1.3em;
+    color:white;
+    border:none;
+    border-radius:15px;
+    cursor:pointer;
+    position:absolute;
+    top:50%;
+    transform: translateY(-50%);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#yesBtn {
+    left:30%;
+    background: linear-gradient(45deg,#ff66b3,#ff1a75);
+}
+#noBtn {
+    left:60%;
+    background: linear-gradient(45deg,#ff9999,#ff4d4d);
+}
+
+#yesBtn:hover, #noBtn:hover {
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 0 20px rgba(255,0,102,0.7);
+}
+
+/* --- TULIPÁN PIXELADO --- */
+#flower {
+    display:grid;
+    justify-content: center;
+    align-content: center;
+    height: 70vh; 
+    margin: 0 auto;
+    grid-gap:1px;
+}
+.pixel {
+    width:15px;
+    height:15px;
+    margin:1px;
+}
